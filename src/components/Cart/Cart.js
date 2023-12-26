@@ -6,18 +6,17 @@ import CartItem from './CartItem';
 
 
 // const Cart = (props) => {
-
 //   const isCartVisible = useSelector((state) => state.ui.cartIsVisible);
- 
+//   const selectedItems = useSelector((state) => state.cart.items);
+
+//   const itemToShow = selectedItems[0]; // Accessing the first item in the array
 
 //   return (
 //     isCartVisible && (
 //       <Card className={classes.cart}>
 //         <h2>Your Shopping Cart</h2>
 //         <ul>
-//         <CartItem
-//           item={{ title: 'Item', quantity: 3, total: 21, price: 7 }}
-//         />
+//           {itemToShow && <CartItem key={itemToShow.id} item={itemToShow} />}
 //         </ul>
 //       </Card>
 //     )

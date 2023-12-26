@@ -4,16 +4,16 @@ import classes from "./CartItem.module.css";
 import { cartActions } from "../../store/cart_slice";
 
 const CartItem = (props) => {
-  const { id, title, quantity, total, price } = props.item || {};
+  const { id, title, quantity, total, price } = props.item;
 
   const dispatch = useDispatch();
 
   const addItemHandler = () => {
-    dispatch(cartActions.addItemToCart({ id, title, quantity, total, price }));
+    dispatch(cartActions.addItemToCart( { id, title, quantity, total, price } ));
   };
 
   const removeItemHandler = () => {
-    dispatch(cartActions.removeItemFromCart());
+    dispatch(cartActions.removeItemFromCart(id));
   };
 
   return (

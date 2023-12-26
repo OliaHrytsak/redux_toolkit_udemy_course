@@ -5,11 +5,11 @@ import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart_slice";
 
 const ProductItem = (props) => {
-  const { id, title, price, quantity, totalPrice, description } = props;
+  const { id, title, price, description } = props;
   const dispatch = useDispatch();
 
   const addItemFromShop = () => {
-    dispatch(cartActions.addItemToCart({ id, title, price, quantity, totalPrice}));
+    dispatch(cartActions.addItemToCart({ id, title, price, description }));
   };
 
   return (
