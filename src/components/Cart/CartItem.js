@@ -4,12 +4,12 @@ import classes from "./CartItem.module.css";
 import { cartActions } from "../../store/cart_slice";
 
 const CartItem = (props) => {
-  const { title, quantity, total, price } = props.item || {};
+  const { id, title, quantity, total, price } = props.item || {};
 
   const dispatch = useDispatch();
 
   const addItemHandler = () => {
-    dispatch(cartActions.addItemToCart({ title, quantity, total, price }));
+    dispatch(cartActions.addItemToCart({ id, title, quantity, total, price }));
   };
 
   const removeItemHandler = () => {
