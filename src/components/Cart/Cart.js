@@ -28,7 +28,9 @@ import CartItem from './CartItem';
 
 const Cart = (props) => {
   const isCartVisible = useSelector((state) => state.ui.cartIsVisible);
-  const selectedItems = useSelector((state) => state.cart.item);
+  const selectedItems = useSelector((state) => state.cart.items);
+
+  
 
   return (
     isCartVisible && (
@@ -36,7 +38,7 @@ const Cart = (props) => {
         <h2>Your Shopping Cart</h2>
         <ul>
           {selectedItems.map((item) => (
-            <CartItem key={item.id} item={item}/>
+            <CartItem key={item.id}/>
           ))}
         </ul>
       </Card>
